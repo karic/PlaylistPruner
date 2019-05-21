@@ -1,0 +1,8 @@
+<div>
+  {{ video.name }}
+
+  <!-- <input type="button" value="&#x2713;" (click)="like($video.id)"/> -->
+  <input type="button" value="&#x274C;" style=" padding: 0;  border: none;  background: none;" (click)="videoDelete()"/>
+  <a *ngIf="video.downloadUrl" type="button" value="&#x274C;" download target="_blank" style=" padding: 0;  border: none;  background: none;" href="{{ video.downloadUrl }}">&#x2193;</a>
+
+</div>

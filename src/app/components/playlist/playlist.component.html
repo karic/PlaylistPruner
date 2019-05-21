@@ -1,0 +1,13 @@
+<div class="row" > 
+
+        <input type="url" (keyup.enter)="fetchPlaylist($event.target.value)" style="width:40%; display: block; margin-left: auto;  margin-right: auto" value="http://www.youtube.com/playlist?list=PLWKjhJtqVAbnZtkAI3BqcYxKnfWn_C704"/>
+
+</div>
+<div class="row" > 
+<input type="button" value="&#x2193; Download" style="display: block; padding: 0;  border: none;  background: none;margin-left: auto; margin-right: auto" (click)="playlistDownload()"/>
+</div>
+
+<app-video-item *ngFor="let video of videos" [video]="video"  (deleteVideo)="deleteVideo($event)">
+    
+</app-video-item>
+
